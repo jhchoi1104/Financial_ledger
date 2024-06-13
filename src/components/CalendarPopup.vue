@@ -13,6 +13,7 @@
 
             <p>당일 수입 내역 : {{ dayCal[0][selectedDate]?.incomes ?? 0 }}</p>
             <p>당일 지출 내역: {{ dayCal[0][selectedDate]?.expenses ?? 0 }}</p>
+            <br />
             <div class="form-group">
                 <button type="submit">저장</button>
                 <button type="button" @click="close">취소</button>

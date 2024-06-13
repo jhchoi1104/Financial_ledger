@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container" data-aos="fade-left">
         <div class="d-flex justify-content-between align-items-center" style="height: 100px">
             <div class="b" style="flex: 1; text-align: center; border: 1px solid">
                 OOO님의 총자산 : {{}}
@@ -10,12 +10,11 @@
 
                 {{ thisMonth }} 월 총 수입: {{ totalIncome }}<br />
                 {{ thisMonth }} 월 수입 및 지출 통계 : {{ asset }}<br />
-                <!-- 일자별 수입과 지출 : {{ dayCal }} -->
             </div>
         </div>
     </div>
-    <button @click="updateDataToServer(updatedData)">전송</button>
-    <div id="calendar">
+    <!-- <button @click="updateDataToServer(updatedData)">전송</button> -->
+    <div id="calendar" data-aos="fade-left">
         <FullCalendar ref="calendar" :options="calendarOptions" :events="events" />
     </div>
     <CalendarPopup v-if="showPopup" @close="closePopup" @save="saveTransaction" :selectedDate="selectedDate" :events="events" :dayCal="dayCal" />
@@ -44,7 +43,6 @@ const calendarOptions = ref({
     initialView: 'dayGridMonth',
     dateClick: function (info) {
         showPopup.value = true;
-        // alert("Clicked on: " + info.dateStr);
         selectedDate.value = info.dateStr;
     },
     events: [],
@@ -111,25 +109,24 @@ const axiosEvents = async () => {
         console.log(dayCal.value[0]);
         calendarOptions.value.events.push({ title: `수입: ${dayCal.value[0][date].totalIncome} 지출: ${dayCal.value[0][date].totalExpense}`, start: date, end: date });
     }
-    // console.log(calendarOptions.value.events);
 };
 
 onMounted(axiosEvents);
 
-const updatedData = {
-    id: 8888,
-    date: '2020-01-01T02:56:00.574Z',
-    expense: 100000,
-};
+// const updatedData = {
+//     id: 8888,
+//     date: '2020-01-01T02:56:00.574Z',
+//     expense: 100000,
+// };
 
-const updateDataToServer = async (updatedData) => {
-    try {
-        const response = await axios.put(`http://localhost:3000/budget/${updatedData.id}`, updatedData);
-        console.log('Data updated successfully:', response.data);
-    } catch (error) {
-        console.error('Error updating data:', error);
-    }
-};
+// const updateDataToServer = async (updatedData) => {
+//     try {
+//         const response = await axios.put(`http://localhost:3000/budget/${updatedData.id}`, updatedData);
+//         console.log('Data updated successfully:', response.data);
+//     } catch (error) {
+//         console.error('Error updating data:', error);
+//     }
+// };
 
 function closePopup() {
     showPopup.value = false;
