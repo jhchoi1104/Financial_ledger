@@ -1,3 +1,4 @@
+// stores/profileStore.js
 import { defineStore } from 'pinia';
 import axios from 'axios';
 import { ref } from 'vue';
@@ -14,19 +15,24 @@ export const useprofileStore = defineStore('profileStore', () => {
         `http://localhost:3000/profile/${id}`,
         updatedProfile
       );
-
-      // 서버 응답이 성공적일 경우 프로필 배열 업데이트
-      const index = profile.value.findIndex((item) => item.id === id);
-      if (index !== -1) {
-        profile.value[index] = response.data;
-      }
+      alert('프로필 저장되었습니다.');
     } catch (error) {
       console.error('Error updating profile:', error);
+    }
+  };
+
+  const getProfile = async (id) => {
+    try {
+      const response = await axios.get(`http://localhost:3000/profile/${id}`);
+      profile.value = response.data; // 가져온 프로필 데이터를 상태에 저장
+    } catch (error) {
+      console.error('프로필 가져오기 실패:', error);
     }
   };
 
   return {
     profile,
     addProfile,
+    getProfile,
   };
 });

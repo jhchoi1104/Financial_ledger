@@ -23,6 +23,24 @@
       "detailCategory": "123",
       "amount": 1000001,
       "memo": "123"
+    },
+    {
+      "id": "2856",
+      "date": "2024-06-05",
+      "type": "수입",
+      "category": "월급",
+      "detailCategory": "qwe",
+      "amount": 123,
+      "memo": "123"
+    },
+    {
+      "id": "0a94",
+      "date": "2024-06-07",
+      "type": "지출",
+      "category": "보건",
+      "detailCategory": "123123",
+      "amount": 1000000000,
+      "memo": "123"
     }
   ],
   "incomeCategory": [
@@ -67,6 +85,10 @@
     {
       "id": "7",
       "category": "통신"
+    },
+    {
+      "id": "8",
+      "category": "저축"
     }
   ],
   "periodicExpense": [
@@ -77,10 +99,12 @@
   ],
   "profile": [
     {
-      "date": "971208",
+      "date": "1997-12-08",
       "name": "유건희",
       "phone": "010-5564-5737",
-      "nickname": "유건",
+      "nickname": "건희",
+      "email": "yysu33@naver.com",
+      "image": "",
       "id": "1"
     }
   ]
