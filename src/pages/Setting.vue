@@ -44,52 +44,67 @@
             />
           </div>
           <button type="submit" class="btn btn-primary button_style">
-            입력
+            수정
           </button>
         </form>
       </div>
-
       <!-- 중간 구분선 -->
       <div class="col-md-1 d-flex align-items-center">
         <div class="divider w-100"></div>
       </div>
-
       <!-- 오른쪽 자산 입력 화면 -->
       <div class="col-md-8">
-        <div style="font-size: 30px; font-weight: 800">Assets</div>
-        <form>
-          <div style="font-size: 20px; font-weight: 800">현재 총 자산</div>
-          <div class="form-group">
-            <label for="assetName">자산 이름</label>
-            <input
-              type="text"
-              class="form-control right_input"
-              id="assetName"
-              placeholder="자산 이름을 입력하세요"
-            />
-          </div>
-          <div class="form-group">
-            <label for="assetValue">자산 가치</label>
-            <input
-              type="number"
-              class="form-control right_input"
-              id="assetValue"
-              placeholder="자산 가치를 입력하세요"
-            />
-          </div>
-          <div class="form-group">
-            <label for="assetDescription">자산 설명</label>
-            <input
-              type="text"
-              class="form-control right_input"
-              id="assetDescription"
-              placeholder="자산 설명을 입력하세요"
-            />
-          </div>
-          <button type="submit" class="btn btn-primary button_style">
-            저장
-          </button>
-        </form>
+        <!-- 현재 총 자산 섹션 -->
+        <div class="asset-section mb-5">
+          <div style="font-size: 30px; font-weight: 800">현재 총 자산</div>
+          <form>
+            <div class="form-group">
+              <label for="assetName">자산 이름</label>
+              <input
+                type="text"
+                class="form-control right_input"
+                id="assetName"
+                placeholder="자산 이름을 입력하세요"
+              />
+            </div>
+            <div class="form-group">
+              <label for="assetValue">자산 가치</label>
+              <input
+                type="number"
+                class="form-control right_input"
+                id="assetValue"
+                placeholder="자산 가치를 입력하세요"
+              />
+            </div>
+            <div class="form-group">
+              <label for="assetDescription">자산 설명</label>
+              <input
+                class="form-control right_input"
+                id="assetDescription"
+                rows="4"
+                placeholder="자산 설명을 입력하세요"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary button_style">
+              저장
+            </button>
+          </form>
+        </div>
+        <!-- 과소비 지수 섹션 -->
+        <div class="overspending-section">
+          <div style="font-size: 30px; font-weight: 800">과소비 지수</div>
+          <form>
+            <div class="form-group">
+              <label for="overspendingIndex">내 현재 과소비 지수:</label>
+              <input
+                type="number"
+                class="form-control right_input"
+                id="overspendingIndex"
+                placeholder="계산된 값을 입력하세요"
+              />
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>

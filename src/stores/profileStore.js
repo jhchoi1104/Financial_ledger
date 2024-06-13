@@ -15,7 +15,7 @@ export const useprofileStore = defineStore('profileStore', () => {
         `http://localhost:3000/profile/${id}`,
         updatedProfile
       );
-      alert('안녀ㅛㅇ');
+      alert('프로필 저장되었습니다.');
     } catch (error) {
       console.error('Error updating profile:', error);
     }

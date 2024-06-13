@@ -23,6 +23,24 @@
       "detailCategory": "123",
       "amount": 1000001,
       "memo": "123"
+    },
+    {
+      "id": "2856",
+      "date": "2024-06-05",
+      "type": "수입",
+      "category": "월급",
+      "detailCategory": "qwe",
+      "amount": 123,
+      "memo": "123"
+    },
+    {
+      "id": "0a94",
+      "date": "2024-06-07",
+      "type": "지출",
+      "category": "보건",
+      "detailCategory": "123123",
+      "amount": 1000000000,
+      "memo": "123"
     }
   ],
   "incomeCategory": [
@@ -81,11 +99,11 @@
   ],
   "profile": [
     {
-      "date": "2222-22-22",
+      "date": "1997-12-08",
       "name": "유건희",
-      "phone": "010-2222-2222",
-      "nickname": "유희",
-      "email": "yys33@naver.com",
+      "phone": "010-5564-5737",
+      "nickname": "건희",
+      "email": "yysu33@naver.com",
       "image": "",
       "id": "1"
     }
