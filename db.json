@@ -67,6 +67,10 @@
     {
       "id": "7",
       "category": "통신"
+    },
+    {
+      "id": "8",
+      "category": "저축"
     }
   ],
   "periodicExpense": [
@@ -77,10 +81,12 @@
   ],
   "profile": [
     {
-      "date": "971208",
+      "date": "2222-22-22",
       "name": "유건희",
-      "phone": "010-5564-5737",
-      "nickname": "유건",
+      "phone": "010-2222-2222",
+      "nickname": "유희",
+      "email": "yys33@naver.com",
+      "image": "",
       "id": "1"
     }
   ]
