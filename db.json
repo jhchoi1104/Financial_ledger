@@ -1,0 +1,87 @@
+{
+  "property": [
+    {
+      "id": "1d6f",
+      "date": "2024-06-13T11:39:00.000Z"
+    }
+  ],
+  "budget": [
+    {
+      "id": "edef",
+      "date": "2024-06-06T09:30:00.000Z",
+      "type": "수입",
+      "category": "이자",
+      "detailCategory": "123",
+      "amount": 100000,
+      "memo": "12344"
+    },
+    {
+      "id": "c378",
+      "date": "2024-06-05",
+      "type": "수입",
+      "category": "이자",
+      "detailCategory": "123",
+      "amount": 1000001,
+      "memo": "123"
+    }
+  ],
+  "incomeCategory": [
+    {
+      "id": "1",
+      "category": "월급"
+    },
+    {
+      "id": "2",
+      "category": "이자"
+    },
+    {
+      "id": "3",
+      "category": "차입"
+    }
+  ],
+  "expenseCategory": [
+    {
+      "id": "1",
+      "category": "세금"
+    },
+    {
+      "id": "2",
+      "category": "식비"
+    },
+    {
+      "id": "3",
+      "category": "주거"
+    },
+    {
+      "id": "4",
+      "category": "보건"
+    },
+    {
+      "id": "5",
+      "category": "오락"
+    },
+    {
+      "id": "6",
+      "category": "교통"
+    },
+    {
+      "id": "7",
+      "category": "통신"
+    }
+  ],
+  "periodicExpense": [
+    {
+      "id": "1d6f",
+      "date": "2024-06-13"
+    }
+  ],
+  "profile": [
+    {
+      "date": "971208",
+      "name": "유건희",
+      "phone": "010-5564-5737",
+      "nickname": "유건",
+      "id": "1"
+    }
+  ]
+}
