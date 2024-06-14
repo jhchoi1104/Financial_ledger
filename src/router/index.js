@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '@/pages/Home.vue';
-import Calender from '@/pages/Calender.vue';
+import History from '@/pages/history.vue';
 import Main from '@/pages/Main.vue';
 import Setting from '@/pages/Setting.vue';
 import Modification from '@/pages/Modification.vue';
@@ -14,9 +14,9 @@ const router = createRouter({
       component: Main,
     },
     {
-      path: '/calender',
-      name: 'calender',
-      component: Calender,
+      path: '/history',
+      name: 'history',
+      component: History,
     },
     {
       path: '/home',

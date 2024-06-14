@@ -140,7 +140,12 @@ const handleSubmit = async () => {
     email: profile.email,
     image: profile.image,
   };
-  await profileStore.addProfile(profile.id, profileItem); // 수정된 함수 호출
+  try {
+    await profileStore.addProfile(profile.id, profileItem); // 수정된 함수 호출
+    alert('수정되었습니다.'); // 성공 시 알림 메시지
+  } catch (error) {
+    console.error('프로필 수정 실패:', error);
+  }
 };
 
 onMounted(async () => {
