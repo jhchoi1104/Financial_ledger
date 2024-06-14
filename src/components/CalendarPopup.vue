@@ -4,20 +4,14 @@
         <form @submit.prevent="submitForm">
             <div class="form-group">
                 <label for="income">당일 총 수입:</label>
-                <input type="number" id="income" :value="totalIncome" readonly />
+                <input type="number" id="income" :value="dayCal[0][selectedDate]?.totalIncome ?? 0" @input="updateTotalIncome($event.target.value)" />
             </div>
             <div class="form-group">
                 <label for="expense">당일 총 지출:</label>
-                <input type="number" id="expense" :value="totalExpense" readonly />
+                <input type="number" id="expense" :value="dayCal[0][selectedDate]?.totalExpense ?? 0" @input="updateTotalExpense($event.target.value)" />
             </div>
-            <div class="form-group">
-                <label for="income-details">당일 수입 내역:</label>
-                <textarea id="income-details" v-model="incomeDetails" rows="4"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="expense-details">당일 지출 내역:</label>
-                <textarea id="expense-details" v-model="expenseDetails" rows="4"></textarea>
-            </div>
+            <p>당일 수입 내역 : {{ dayCal[0][selectedDate]?.incomes ?? 0 }}</p>
+            <p>당일 지출 내역: {{ dayCal[0][selectedDate]?.expenses ?? 0 }}</p>
             <br />
             <div class="form-group">
                 <button type="submit">저장</button>
@@ -60,7 +54,6 @@ const updateDetails = () => {
 
 onMounted(() => {
     updateDetails();
-    // console.log(props.events);
 });
 
 watch(selectedDate, updateDetails);

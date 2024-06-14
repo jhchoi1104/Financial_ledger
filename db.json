@@ -88,6 +88,24 @@
       "memo": "123"
     },
     {
+      "id": "2856",
+      "date": "2024-06-05",
+      "type": "지출",
+      "category": "월급",
+      "detailCategory": "qwe",
+      "amount": 3300,
+      "memo": "123"
+    },
+    {
+      "id": "2856",
+      "date": "2024-06-06",
+      "type": "지출",
+      "category": "월급",
+      "detailCategory": "qwe",
+      "amount": 10000,
+      "memo": "123"
+    },
+    {
       "id": "0a94",
       "date": "2024-06-07",
       "type": "지출",
