@@ -5,7 +5,7 @@
   >
     <div class="d-flex">
       <div class="p-2" style="flex: 1; text-align: center; border: 1px solid">
-        거래 내역
+        거래 내역123
       </div>
     </div>
   </div>
