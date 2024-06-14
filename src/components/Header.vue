@@ -26,8 +26,8 @@
             >
           </li>
           <li>
-            <router-link to="/calender" class="nav-link scrollto"
-              ><i class="bx bx-user"></i> <span>내역</span></router-link
+            <router-link to="/history" class="nav-link scrollto"
+              ><i class="bx bx-user"></i> <span>목록별</span></router-link
             >
           </li>
           <li>
