@@ -10,7 +10,6 @@ export const useDateStore = defineStore('date', {
       this.budget.push(item);
       try {
         const response = await axios.post('http://localhost:3000/budget', item);
-        console.log('Budget item saved:', response.data);
       } catch (error) {
         console.error('Error saving budget item:', error);
       }
