@@ -24,6 +24,7 @@
     "date-fns": "^3.6.0",
     "fortawesome": "^0.0.1-security",
     "json-server": "^1.0.0-beta.1",
+    "moment": "^2.30.1",
     "pinia": "^2.1.7",
     "vue": "^3.4.21",
     "vue-router": "^4.3.3"
