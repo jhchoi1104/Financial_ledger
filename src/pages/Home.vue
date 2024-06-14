@@ -12,6 +12,7 @@
         <h3>{{ thisMonth }} 월 수입 및 지출 통계 : {{ asset }}원<br /></h3>
       </div>
     </div>
+<<<<<<< HEAD
   </div>
   <!-- <button @click="updateDataToServer(updatedData)">전송</button> -->
   <div id="calendar" data-aos="fade-left">
@@ -20,6 +21,21 @@
       :options="calendarOptions"
       :events="events"
       :dayCal="dayCal"
+=======
+    <!-- <button @click="updateDataToServer(updatedData)">전송</button> -->
+    <div id="calendar" data-aos="fade-left">
+        <FullCalendar ref="calendar" :options="calendarOptions" :events="events" :dayCal="dayCal" />
+    </div>
+    <CalendarPopup
+        v-if="showPopup"
+        @close="closePopup"
+        @save="saveTransaction"
+        :selectedDate="selectedDate"
+        :events="events"
+        :dayCal="dayCal"
+        :totalIncome="selectedDayData.dailyIncome"
+        :totalExpense="selectedDayData.dailyExpense"
+>>>>>>> dffc552adc6a3120a0763fdcef3b72dd8baf73df
     />
   </div>
   <CalendarPopup
@@ -127,6 +143,7 @@ const axiosEvents = async () => {
     const eventsArray = [];
     const dailyCalc = {};
 
+<<<<<<< HEAD
     data.forEach((dailyData) => {
       // console.log(dailyData);
       const date = dailyData.date ? dailyData.date.substring(0, 10) : null;
@@ -152,18 +169,75 @@ const axiosEvents = async () => {
         dailyCalc[date].totalExpense += amount;
       }
     });
+=======
+        data.forEach((dailyData) => {
+            // console.log(dailyData);
+            const date = dailyData.date ? dailyData.date.substring(0, 10) : null;
+            const type = dailyData.type;
+            const amount = dailyData.amount;
+            const category = dailyData.category; // 카테고리 가져오기
+
+            if (!dailyCalc[date]) {
+                dailyCalc[date] = {
+                    incomes: [],
+                    expenses: [],
+                    totalIncome: 0,
+                    totalExpense: 0,
+                    category: [], // 카테고리 배열 초기화
+                };
+            }
+
+            if (type === '수입') {
+                dailyCalc[date].incomes.push({ amount, category }); // 카테고리 추가
+                dailyCalc[date].totalIncome += amount;
+            } else if (type === '지출') {
+                dailyCalc[date].expenses.push({ amount, category }); // 카테고리 추가
+                dailyCalc[date].totalExpense += amount;
+            }
+        });
+>>>>>>> dffc552adc6a3120a0763fdcef3b72dd8baf73df
 
     const currentMonth = new Date().getMonth() + 1;
     totalIncome.value = 0;
     totalExpense.value = 0;
     thisMonth.value = currentMonth;
 
+<<<<<<< HEAD
     for (const date in dailyCalc) {
       const month = new Date(date).getMonth() + 1;
       if (month === currentMonth) {
         totalIncome.value += dailyCalc[date].totalIncome;
         totalExpense.value += dailyCalc[date].totalExpense;
       }
+=======
+        for (const date in dailyCalc) {
+            const month = new Date(date).getMonth() + 1;
+            if (month === currentMonth) {
+                totalIncome.value += dailyCalc[date].totalIncome;
+                totalExpense.value += dailyCalc[date].totalExpense;
+            }
+        }
+
+        asset.value = totalIncome.value - totalExpense.value;
+
+        for (const date in dailyCalc) {
+            const incomeDetails = dailyCalc[date].incomes.map((item) => `${item.category}: ${item.amount}`).join(', '); // 카테고리와 금액 표시
+            const expenseDetails = dailyCalc[date].expenses.map((item) => `${item.category}: ${item.amount}`).join(', '); // 카테고리와 금액 표시
+            eventsArray.push({
+                dateAmount: `${date}: 총 수입 - ${dailyCalc[date].totalIncome}, 총 지출 - ${dailyCalc[date].totalExpense} (수입 내역: ${incomeDetails}, 지출 내역: ${expenseDetails})`,
+                date: date,
+                dailyIncome: dailyCalc[date].totalIncome,
+                dailyExpense: dailyCalc[date].totalExpense,
+                dailyIncomeList: incomeDetails,
+                dailyExpenseList: expenseDetails,
+            });
+        }
+
+        dayCal.value.push(dailyCalc);
+        events.value = eventsArray;
+    } catch (error) {
+        console.error('Error fetching events:', error);
+>>>>>>> dffc552adc6a3120a0763fdcef3b72dd8baf73df
     }
 
     asset.value = totalIncome.value - totalExpense.value;
@@ -206,9 +280,15 @@ const axiosEvents = async () => {
 };
 
 onMounted(async () => {
+<<<<<<< HEAD
   console.log(dayCal.value);
   await fetchProfile();
   axiosEvents();
+=======
+    console.log(dayCal.value);
+    await fetchProfile();
+    axiosEvents();
+>>>>>>> dffc552adc6a3120a0763fdcef3b72dd8baf73df
 });
 
 function closePopup() {

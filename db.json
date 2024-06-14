@@ -43,6 +43,7 @@
       "date": "2024-06-05",
       "type": "수입",
       "category": "이자",
+<<<<<<< HEAD
       "detailCategory": "123",
       "amount": 1000001,
       "memo": "123"
@@ -190,6 +191,10 @@
       "detailCategory": "",
       "amount": 100000,
       "memo": "test"
+=======
+      "amount": 110000,
+      "memo": "123"
+>>>>>>> dffc552adc6a3120a0763fdcef3b72dd8baf73df
     },
     {
       "id": "3c43",
