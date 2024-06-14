@@ -8,6 +8,51 @@
   "budget": [
     {
       "id": "edef",
+      "date": "2024-05-05T11:12:00.000Z",
+      "type": "지출",
+      "category": "이자",
+      "detailCategory": "123",
+      "amount": 55520,
+      "memo": "12344"
+    },
+    {
+      "id": "edef",
+      "date": "2024-05-11T11:12:00.000Z",
+      "type": "수입",
+      "category": "이자",
+      "detailCategory": "123",
+      "amount": 20000,
+      "memo": "12344"
+    },
+    {
+      "id": "edef",
+      "date": "2024-05-14T11:12:00.000Z",
+      "type": "수입",
+      "category": "이자",
+      "detailCategory": "123",
+      "amount": 7000,
+      "memo": "12344"
+    },
+    {
+      "id": "edef",
+      "date": "2024-06-03T11:12:00.000Z",
+      "type": "수입",
+      "category": "이자",
+      "detailCategory": "123",
+      "amount": 33220,
+      "memo": "12344"
+    },
+    {
+      "id": "edef",
+      "date": "2024-06-03T11:12:00.000Z",
+      "type": "지출",
+      "category": "이자",
+      "detailCategory": "123",
+      "amount": 75120,
+      "memo": "12344"
+    },
+    {
+      "id": "edef",
       "date": "2024-06-06T09:30:00.000Z",
       "type": "수입",
       "category": "이자",
@@ -16,12 +61,21 @@
       "memo": "12344"
     },
     {
+      "id": "edef",
+      "date": "2024-06-06T12:12:00.000Z",
+      "type": "수입",
+      "category": "이자",
+      "detailCategory": "123",
+      "amount": 3000,
+      "memo": "12344"
+    },
+    {
       "id": "c378",
       "date": "2024-06-05",
       "type": "수입",
       "category": "이자",
       "detailCategory": "123",
-      "amount": 1000001,
+      "amount": 100000,
       "memo": "123"
     },
     {
@@ -30,7 +84,25 @@
       "type": "수입",
       "category": "월급",
       "detailCategory": "qwe",
-      "amount": 123,
+      "amount": 3000000,
+      "memo": "123"
+    },
+    {
+      "id": "2856",
+      "date": "2024-06-05",
+      "type": "지출",
+      "category": "월급",
+      "detailCategory": "qwe",
+      "amount": 3300,
+      "memo": "123"
+    },
+    {
+      "id": "2856",
+      "date": "2024-06-06",
+      "type": "지출",
+      "category": "월급",
+      "detailCategory": "qwe",
+      "amount": 10000,
       "memo": "123"
     },
     {
@@ -39,8 +111,62 @@
       "type": "지출",
       "category": "보건",
       "detailCategory": "123123",
-      "amount": 1000000000,
+      "amount": 110000,
       "memo": "123"
+    },
+    {
+      "id": "0a94",
+      "date": "2024-06-11",
+      "type": "지출",
+      "category": "보건",
+      "detailCategory": "123123",
+      "amount": 7700,
+      "memo": "123"
+    },
+    {
+      "id": "edef",
+      "date": "2024-07-11T11:12:00.000Z",
+      "type": "수입",
+      "category": "이자",
+      "detailCategory": "123",
+      "amount": 150000,
+      "memo": "수입"
+    },
+    {
+      "id": "edef",
+      "date": "2024-07-05T11:12:00.000Z",
+      "type": "수입",
+      "category": "이자",
+      "detailCategory": "123",
+      "amount": 12500,
+      "memo": "수입"
+    },
+    {
+      "id": "edef",
+      "date": "2024-07-05T12:12:00.000Z",
+      "type": "지출",
+      "category": "이자",
+      "detailCategory": "123",
+      "amount": 7700,
+      "memo": "수입"
+    },
+    {
+      "id": "edef",
+      "date": "2024-07-11T12:12:00.000Z",
+      "type": "지출",
+      "category": "이자",
+      "detailCategory": "123",
+      "amount": 23500,
+      "memo": "수입"
+    },
+    {
+      "id": "edef",
+      "date": "2024-07-15T12:12:00.000Z",
+      "type": "수입",
+      "category": "이자",
+      "detailCategory": "123",
+      "amount": 133500,
+      "memo": "수입"
     }
   ],
   "incomeCategory": [
@@ -99,12 +225,10 @@
   ],
   "profile": [
     {
-      "date": "1997-12-08",
-      "name": "유건희",
-      "phone": "010-5564-5737",
-      "nickname": "건희",
-      "email": "yysu33@naver.com",
-      "image": "",
+      "name": "",
+      "phone": "",
+      "date": "",
+      "nickname": "",
       "id": "1"
     }
   ]
