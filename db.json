@@ -2,71 +2,40 @@
   "property": [
     {
       "id": "1d6f",
-      "date": "2024-06-13T11:39:00.000Z"
+      "date": "2024-06-13"
     }
   ],
   "budget": [
     {
       "id": "edef",
-      "date": "2024-05-05T11:12:00.000Z",
+      "date": "2024-06-06",
       "type": "지출",
-      "category": "이자",
-      "detailCategory": "123",
-      "amount": 55520,
-      "memo": "12344"
+      "category": "식비",
+      "amount": 5000,
+      "memo": "빕스44"
     },
     {
-      "id": "edef",
-      "date": "2024-05-11T11:12:00.000Z",
-      "type": "수입",
-      "category": "이자",
-      "detailCategory": "123",
-      "amount": 20000,
-      "memo": "12344"
-    },
-    {
-      "id": "edef",
-      "date": "2024-05-14T11:12:00.000Z",
-      "type": "수입",
-      "category": "이자",
-      "detailCategory": "123",
-      "amount": 7000,
-      "memo": "12344"
-    },
-    {
-      "id": "edef",
-      "date": "2024-06-03T11:12:00.000Z",
-      "type": "수입",
-      "category": "이자",
-      "detailCategory": "123",
-      "amount": 33220,
-      "memo": "12344"
-    },
-    {
-      "id": "edef",
-      "date": "2024-06-03T11:12:00.000Z",
+      "id": "ed3f",
+      "date": "2024-06-06",
       "type": "지출",
-      "category": "이자",
-      "detailCategory": "123",
-      "amount": 75120,
-      "memo": "12344"
-    },
-    {
-      "id": "edef",
-      "date": "2024-06-06T09:30:00.000Z",
-      "type": "수입",
-      "category": "이자",
-      "detailCategory": "123",
+      "category": "",
       "amount": 100000,
       "memo": "12344"
     },
     {
-      "id": "edef",
-      "date": "2024-06-06T12:12:00.000Z",
+      "id": "e2ef",
+      "date": "2024-06-06",
       "type": "수입",
       "category": "이자",
-      "detailCategory": "123",
-      "amount": 3000,
+      "amount": 100000,
+      "memo": "12344"
+    },
+    {
+      "id": "e1ef",
+      "date": "2024-06-06",
+      "type": "수입",
+      "category": "이자",
+      "amount": 100000,
       "memo": "12344"
     },
     {
@@ -74,98 +43,207 @@
       "date": "2024-06-05",
       "type": "수입",
       "category": "이자",
+      "detailCategory": "123",
+      "amount": 100000,
+      "memo": "123"
+    },
+    {
+      "id": "b429",
+      "date": "2024-06-14",
+      "type": "수입",
+      "category": "월급",
+      "detailCategory": "",
+      "amount": 1000000000,
+      "memo": "123"
+    },
+    {
+      "id": "9dbd",
+      "date": "2024-06-14",
+      "type": "지출",
+      "category": "저축",
+      "detailCategory": "1234",
+      "amount": 55000,
+      "memo": "123"
+    },
+    {
+      "id": "9e2a",
+      "date": "2024-06-14",
+      "type": "수입",
+      "category": "월급",
+      "detailCategory": "1234",
+      "amount": 1000000000,
+      "memo": ""
+    },
+    {
+      "id": "dc45",
+      "date": "2024-06-14",
+      "type": "지출",
+      "category": "저축",
+      "detailCategory": "1234",
+      "amount": 55000,
+      "memo": "123"
+    },
+    {
+      "id": "2c47",
+      "date": "2024-06-14",
+      "type": "수입",
+      "category": "월급",
+      "detailCategory": "",
+      "amount": 1000000000,
+      "memo": "123"
+    },
+    {
+      "id": "414c",
+      "date": "2024-06-14",
+      "type": "지출",
+      "category": "저축",
+      "detailCategory": "",
+      "amount": 80000000,
+      "memo": "123"
+    },
+    {
+      "id": "9225",
+      "date": "2024-06-14",
+      "type": "수입",
+      "category": "월급",
+      "detailCategory": "1234",
+      "amount": 1000000000,
+      "memo": "123"
+    },
+    {
+      "id": "71c1",
+      "date": "2024-06-13",
+      "type": "지출",
+      "category": "저축",
+      "detailCategory": "",
+      "amount": 550000,
+      "memo": ""
+    },
+    {
+      "id": "16a1",
+      "date": "2024-06-14",
+      "type": "수입",
+      "category": "월급",
+      "detailCategory": "",
+      "amount": 1000000000,
+      "memo": ""
+    },
+    {
+      "id": "7394",
+      "date": "2024-06-14",
+      "type": "지출",
+      "category": "저축",
+      "detailCategory": "",
+      "amount": 550000,
+      "memo": ""
+    },
+    {
+      "id": "33e3",
+      "date": "2024-06-14",
+      "type": "수입",
+      "category": "월급",
+      "detailCategory": "",
+      "amount": 1000000000,
+      "memo": "123"
+    },
+    {
+      "id": "3dc0",
+      "date": "2024-06-14",
+      "type": "수입",
+      "category": "월급",
+      "detailCategory": "",
+      "amount": 1000000000,
+      "memo": "123"
+    },
+    {
+      "id": "6e8e",
+      "date": "2024-06-14",
+      "type": "지출",
+      "category": "저축",
+      "detailCategory": "",
+      "amount": 550000,
+      "memo": ""
+    },
+    {
+      "id": "920f",
+      "date": "2024-06-14",
+      "type": "수입",
+      "category": "월급",
+      "detailCategory": "",
+      "amount": 1000000000,
+      "memo": ""
+    },
+    {
+      "id": "9b8b",
+      "date": "2024-06-14",
+      "type": "지출",
+      "category": "저축",
+      "detailCategory": "",
+      "amount": 550000,
+      "memo": ""
+    },
+    {
+      "id": "059a",
+      "date": "2024-06-14",
+      "type": "수입",
+      "category": "월급",
+
       "amount": 110000,
       "memo": "123"
     },
     {
-      "id": "2856",
+      "id": "3c43",
+      "date": "2024-06-14",
+      "type": "지출",
+      "category": "저축",
+      "detailCategory": "",
+      "amount": 50000,
+      "memo": "test"
+    },
+    {
+      "id": "b76c",
       "date": "2024-06-05",
       "type": "수입",
       "category": "월급",
-      "detailCategory": "qwe",
-      "amount": 3000000,
-      "memo": "123"
+      "detailCategory": "",
+      "amount": 100000000,
+      "memo": "종현 월급"
     },
     {
-      "id": "2856",
+      "id": "53bf",
       "date": "2024-06-05",
-      "type": "지출",
+      "type": "수입",
       "category": "월급",
-      "detailCategory": "qwe",
-      "amount": 3300,
-      "memo": "123"
+      "detailCategory": "",
+      "amount": 100000000,
+      "memo": "종현 월급"
     },
     {
-      "id": "2856",
-      "date": "2024-06-06",
-      "type": "지출",
+      "id": "8390",
+      "date": "2024-06-14",
+      "type": "수입",
       "category": "월급",
-      "detailCategory": "qwe",
-      "amount": 10000,
-      "memo": "123"
+      "detailCategory": "",
+      "amount": 50000,
+      "memo": ""
     },
     {
-      "id": "0a94",
-      "date": "2024-06-07",
+      "id": "0cfe",
+      "date": "2024-06-14",
       "type": "지출",
-      "category": "보건",
-      "detailCategory": "123123",
-      "amount": 110000,
-      "memo": "123"
+      "category": "저축",
+      "detailCategory": "",
+      "amount": 1000,
+      "memo": ""
     },
     {
-      "id": "0a94",
-      "date": "2024-06-11",
-      "type": "지출",
-      "category": "보건",
-      "detailCategory": "123123",
-      "amount": 7700,
-      "memo": "123"
-    },
-    {
-      "id": "edef",
-      "date": "2024-07-11T11:12:00.000Z",
+      "id": "335d",
+      "date": "2024-06-14",
       "type": "수입",
-      "category": "이자",
-      "detailCategory": "123",
-      "amount": 150000,
-      "memo": "수입"
-    },
-    {
-      "id": "edef",
-      "date": "2024-07-05T11:12:00.000Z",
-      "type": "수입",
-      "category": "이자",
-      "detailCategory": "123",
-      "amount": 12500,
-      "memo": "수입"
-    },
-    {
-      "id": "edef",
-      "date": "2024-07-05T12:12:00.000Z",
-      "type": "지출",
-      "category": "이자",
-      "detailCategory": "123",
-      "amount": 7700,
-      "memo": "수입"
-    },
-    {
-      "id": "edef",
-      "date": "2024-07-11T12:12:00.000Z",
-      "type": "지출",
-      "category": "이자",
-      "detailCategory": "123",
-      "amount": 23500,
-      "memo": "수입"
-    },
-    {
-      "id": "edef",
-      "date": "2024-07-15T12:12:00.000Z",
-      "type": "수입",
-      "category": "이자",
-      "detailCategory": "123",
-      "amount": 133500,
-      "memo": "수입"
+      "category": "월급",
+      "detailCategory": "",
+      "amount": 100000,
+      "memo": "dada"
     }
   ],
   "incomeCategory": [
@@ -224,10 +302,10 @@
   ],
   "profile": [
     {
-      "name": "",
-      "phone": "",
-      "date": "",
-      "nickname": "",
+      "name": "최종현",
+      "phone": "010-1234-1234",
+      "date": "1998-11-04",
+      "nickname": "종현",
       "id": "1"
     }
   ]

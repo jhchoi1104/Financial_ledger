@@ -59,30 +59,30 @@
           <div style="font-size: 30px; font-weight: 800">현재 총 자산</div>
           <form>
             <div class="form-group">
-              <label for="assetName">자산 이름</label>
+              <label for="assetName">은행 이름</label>
               <input
                 type="text"
                 class="form-control right_input"
                 id="assetName"
-                placeholder="자산 이름을 입력하세요"
+                placeholder="은행 이름을 입력하세요"
               />
             </div>
             <div class="form-group">
-              <label for="assetValue">자산 가치</label>
+              <label for="assetValue">계좌 번호</label>
               <input
                 type="number"
                 class="form-control right_input"
                 id="assetValue"
-                placeholder="자산 가치를 입력하세요"
+                placeholder="계좌번호를 입력하세요"
               />
             </div>
             <div class="form-group">
-              <label for="assetDescription">자산 설명</label>
+              <label for="assetDescription">설명</label>
               <input
                 class="form-control right_input"
                 id="assetDescription"
                 rows="4"
-                placeholder="자산 설명을 입력하세요"
+                placeholder="memo"
               />
             </div>
             <button type="submit" class="btn btn-primary button_style">
@@ -95,13 +95,19 @@
           <div style="font-size: 30px; font-weight: 800">과소비 지수</div>
           <form>
             <div class="form-group">
-              <label for="overspendingIndex">내 현재 과소비 지수:</label>
+              <!-- <label for="overspendingIndex">내 현재 과소비 지수:</label> -->
               <input
+                v-model="overspendingIndex"
                 type="number"
                 class="form-control right_input"
                 id="overspendingIndex"
                 placeholder="계산된 값을 입력하세요"
               />
+              <div v-if="overspendingMessage">
+                <p style="font-size: 20px; font-style: bold; color: red">
+                  내 현재 과소비 지수: {{ overspendingIndex }}
+                </p>
+              </div>
             </div>
           </form>
         </div>
@@ -111,10 +117,12 @@
 </template>
 
 <script setup>
-import { onMounted, reactive } from 'vue';
+import { onMounted, reactive, ref, watch } from 'vue'; // 여기에 ref를 추가
 import { useRouter } from 'vue-router';
 import { useprofileStore } from '../stores/profileStore';
+import axios from 'axios'; // axios 추가
 import '../assets/css/main.css';
+import { constructNow } from 'date-fns';
 
 const router = useRouter();
 const profileStore = useprofileStore(); // profileStore 인스턴스 생성
@@ -131,6 +139,9 @@ const profile = reactive({
 
 const showHeader = router.currentRoute.value.path !== '/';
 
+const overspendingIndex = ref(0); // 과소비 지수
+const overspendingMessage = ref(''); // 과소비 지수에 따른 메시지
+
 const handleSubmit = async () => {
   const profileItem = {
     date: profile.date,
@@ -140,11 +151,49 @@ const handleSubmit = async () => {
     email: profile.email,
     image: profile.image,
   };
+  await profileStore.addProfile(profile.id, profileItem); // 수정된 함수 호출
+};
+
+const fetchBudgetData = async () => {
   try {
-    await profileStore.addProfile(profile.id, profileItem); // 수정된 함수 호출
-    alert('수정되었습니다.'); // 성공 시 알림 메시지
+    const response = await axios.get('/api/budget');
+    const data = response.data;
+
+    budgetData = data; // 서버에서 가져온 데이터의 name을 반응형 상태에 저장
   } catch (error) {
-    console.error('프로필 수정 실패:', error);
+    console.error('예산 데이터 가져오기 실패:', error);
+  }
+};
+
+const calculateOverspendingIndex = async () => {
+  try {
+    const response = await axios.get('/api/budget'); // 실제 db.json 파일 경로로 수정
+    const data = response.data;
+
+    const saving_1 = data.find((item) => item.category === '저축');
+    const salary_1 = data.find((item) => item.category === '월급');
+
+    const saving = saving_1.amount;
+    const salary = salary_1.amount;
+
+    overspendingIndex.value = (salary - saving) / salary;
+    console.log(overspendingIndex.value);
+
+    if (overspendingIndex.value < 0.5) {
+      overspendingMessage.value = '알뜰한 당신 최고에요!';
+    } else if (overspendingIndex.value < 0.7) {
+      overspendingMessage.value = '적정 단계! 좀 더 분발하세요!';
+    } else if (overspendingIndex.value < 0.9) {
+      overspendingMessage.value = '과소비 직전!!!';
+    } else {
+      overspendingMessage.value = '재정 파산...ㅠㅠ';
+    }
+
+    if (saving === 0) {
+      throw new Error('저축 값이 0이므로 과소비 지수를 계산할 수 없습니다.');
+    }
+  } catch (error) {
+    console.error('과소비 지수 계산 실패:', error);
   }
 };
 
@@ -152,11 +201,19 @@ onMounted(async () => {
   try {
     await profileStore.getProfile(profile.id); // profile.id를 인자로 전달하여 데이터 가져오기
     Object.assign(profile, profileStore.profile); // 가져온 프로필 데이터를 profile 상태에 반영
+    await calculateOverspendingIndex(); // 과소비 지수 계산 함수 호출
   } catch (error) {
     console.error('프로필 가져오기 실패:', error);
     // 실패 처리 로직 추가
   }
 });
+
+watch(
+  () => [, ,],
+  () => {
+    calculateOverspendingIndex();
+  }
+);
 </script>
 
 <style scoped>
