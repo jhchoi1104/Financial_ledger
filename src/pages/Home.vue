@@ -12,9 +12,17 @@
     </div>
     <!-- <button @click="updateDataToServer(updatedData)">전송</button> -->
     <div id="calendar" data-aos="fade-left">
-        <FullCalendar ref="calendar" :options="calendarOptions" :events="events" />
+        <FullCalendar ref="calendar" :options="calendarOptions" :events="events" :dayCal="dayCal" />
     </div>
-    <CalendarPopup v-if="showPopup" @close="closePopup" @save="saveTransaction" :selectedDate="selectedDate" :events="events" :dayCal="dayCal" />
+    <CalendarPopup
+        v-if="showPopup"
+        @close="closePopup"
+        @save="saveTransaction"
+        :selectedDate="selectedDate"
+        :events="events"
+        :dayCal="dayCal"
+        :totalIncome="selectedDayData.dailyIncome"
+    />
 </template>
 
 <script setup>
@@ -160,6 +168,7 @@ const axiosEvents = async () => {
     // console.log(events.value);
 
     const d = dayCal.value[0];
+    // console.log(d);
 
     for (const date in d) {
         calendarOptions.value.events.push({
