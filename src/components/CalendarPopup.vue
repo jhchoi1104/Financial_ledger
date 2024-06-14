@@ -4,11 +4,11 @@
         <form @submit.prevent="submitForm">
             <div class="form-group">
                 <label for="income">당일 총 수입:</label>
-                <input type="number" id="income" :value="dayCal[0][selectedDate]?.totalIncome ?? 0" @input="updateTotalIncome($event.target.value)" />
+                <input type="number" id="income" :value="dayCal[0][selectedDate]?.totalIncome ?? 0" @input="updateTotalIncome($event.target.value)" readonly />
             </div>
             <div class="form-group">
                 <label for="expense">당일 총 지출:</label>
-                <input type="number" id="expense" :value="dayCal[0][selectedDate]?.totalExpense ?? 0" @input="updateTotalExpense($event.target.value)" />
+                <input type="number" id="expense" :value="dayCal[0][selectedDate]?.totalExpense ?? 0" @input="updateTotalExpense($event.target.value)" readonly />
             </div>
             <p>당일 수입 내역 : {{ dayCal[0][selectedDate]?.incomes ?? 0 }}</p>
             <p>당일 지출 내역: {{ dayCal[0][selectedDate]?.expenses ?? 0 }}</p>
@@ -54,6 +54,7 @@ const updateDetails = () => {
 
 onMounted(() => {
     updateDetails();
+    console.log(props.dayCal);
 });
 
 watch(selectedDate, updateDetails);
