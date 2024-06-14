@@ -1,5 +1,5 @@
 <template>
-  <div class="container mt-5">
+  <div class="container mt-5" data-aos="fade-left">
     <div class="row" style="min-height: 400px">
       <!-- 왼쪽 프로필 입력 화면 -->
       <div class="col-md-3 text-center">

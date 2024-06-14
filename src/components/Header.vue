@@ -22,22 +22,25 @@
         <ul>
           <li>
             <router-link to="/home" class="nav-link scrollto"
-              ><i class="bx bx-user"></i> <span>Home</span></router-link
+              ><i class="fa-regular fa-calendar"></i>
+              <span>Home</span></router-link
             >
           </li>
           <li>
             <router-link to="/calender" class="nav-link scrollto"
-              ><i class="bx bx-user"></i> <span>내역</span></router-link
+              ><i class="fa-solid fa-file-waveform"></i>
+              <span>내역</span></router-link
             >
           </li>
           <li>
             <router-link to="/Modification" class="nav-link scrollto"
-              ><i class="bx bx-file-blank"></i> <span>입력</span></router-link
+              ><i class="fa-solid fa-keyboard"></i>
+              <span>입력</span></router-link
             >
           </li>
           <li>
             <router-link to="/setting" class="nav-link scrollto"
-              ><i class="bx bx-book-content"></i>
+              ><i class="fa-solid fa-id-card"></i>
               <span>프로필설정</span></router-link
             >
           </li>
@@ -57,5 +60,8 @@ const showHeader = computed(() => route.path !== '/');
 </script>
 
 <style scoped>
+.li {
+  padding-right: 2px;
+}
 /* 스타일 추가 (기본적으로 필요한 경우) */
 </style>
