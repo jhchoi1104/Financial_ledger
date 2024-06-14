@@ -22,6 +22,7 @@
         :events="events"
         :dayCal="dayCal"
         :totalIncome="selectedDayData.dailyIncome"
+        :totalExpense="selectedDayData.dailyExpense"
     />
 </template>
 
@@ -109,9 +110,11 @@ const axiosEvents = async () => {
         const dailyCalc = {};
 
         data.forEach((dailyData) => {
+            // console.log(dailyData);
             const date = dailyData.date ? dailyData.date.substring(0, 10) : null;
             const type = dailyData.type;
             const amount = dailyData.amount;
+            const category = dailyData.category; // 카테고리 가져오기
 
             if (!dailyCalc[date]) {
                 dailyCalc[date] = {
@@ -119,14 +122,15 @@ const axiosEvents = async () => {
                     expenses: [],
                     totalIncome: 0,
                     totalExpense: 0,
+                    category: [], // 카테고리 배열 초기화
                 };
             }
 
             if (type === '수입') {
-                dailyCalc[date].incomes.push(amount);
+                dailyCalc[date].incomes.push({ amount, category }); // 카테고리 추가
                 dailyCalc[date].totalIncome += amount;
             } else if (type === '지출') {
-                dailyCalc[date].expenses.push(amount);
+                dailyCalc[date].expenses.push({ amount, category }); // 카테고리 추가
                 dailyCalc[date].totalExpense += amount;
             }
         });
@@ -147,8 +151,8 @@ const axiosEvents = async () => {
         asset.value = totalIncome.value - totalExpense.value;
 
         for (const date in dailyCalc) {
-            const incomeDetails = dailyCalc[date].incomes.join(', ');
-            const expenseDetails = dailyCalc[date].expenses.join(', ');
+            const incomeDetails = dailyCalc[date].incomes.map((item) => `${item.category}: ${item.amount}`).join(', '); // 카테고리와 금액 표시
+            const expenseDetails = dailyCalc[date].expenses.map((item) => `${item.category}: ${item.amount}`).join(', '); // 카테고리와 금액 표시
             eventsArray.push({
                 dateAmount: `${date}: 총 수입 - ${dailyCalc[date].totalIncome}, 총 지출 - ${dailyCalc[date].totalExpense} (수입 내역: ${incomeDetails}, 지출 내역: ${expenseDetails})`,
                 date: date,
@@ -180,6 +184,7 @@ const axiosEvents = async () => {
 };
 
 onMounted(async () => {
+    console.log(dayCal.value);
     await fetchProfile();
     axiosEvents();
 });
