@@ -1,223 +1,114 @@
 {
-    "property": [
-        {
-            "id": "1d6f",
-            "date": "2024-06-13T11:39:00.000Z"
-        }
-    ],
-    "budget": [
-        {
-            "id": "921",
-            "date": "2024-05-15T11:13:10.607Z",
-            "category": "",
-            "detailCategory": "",
-            "memo": "",
-            "income": 13114,
-            "expense": 5555,
-            "dailyCalc": 0
-        },
-        {
-            "id": "922",
-            "date": "2024-05-22T09:23:20.607Z",
-            "category": "",
-            "detailCategory": "",
-            "memo": "",
-            "income": 13114,
-            "expense": 5555,
-            "dailyCalc": 0
-        },
-        {
-            "id": "9942",
-            "date": "2024-06-10T05:03:10.607Z",
-            "category": "",
-            "detailCategory": "",
-            "memo": "",
-            "income": 13114,
-            "expense": 5555,
-            "dailyCalc": 0
-        },
-        {
-            "id": "ba9f",
-            "date": "2024-06-10T05:12:10.629Z",
-            "category": "월급",
-            "detailCategory": "511",
-            "memo": "123",
-            "income": 55555,
-            "expense": 330,
-            "dailyCalc": 0
-        },
-        {
-            "id": "27bb",
-            "date": "2024-06-10T05:18:18.702Z",
-            "category": "주거",
-            "detailCategory": "123",
-            "memo": "123",
-            "income": 11333,
-            "expense": 113,
-            "dailyCalc": 0
-        },
-        {
-            "id": "6701",
-            "date": "2024-06-01T05:20:00.000Z",
-            "category": "세금",
-            "detailCategory": "123",
-            "memo": "123123",
-            "income": 5550,
-            "expense": 110,
-            "dailyCalc": 0
-        },
-
-        {
-            "id": "1af4",
-            "date": "2024-06-07T06:50:00.000Z",
-            "category": "세금",
-            "detailCategory": "123",
-            "memo": "123",
-            "income": 41240,
-            "expense": 1120,
-            "dailyCalc": 0
-        },
-        {
-            "id": "f338",
-            "date": "2024-06-10T06:56:00.574Z",
-            "category": "이자",
-            "detailCategory": "123",
-            "memo": "4444",
-            "income": 5550,
-            "expense": 110,
-            "dailyCalc": 0
-        },
-        {
-            "id": "5ee6",
-            "date": "2024-06-01T06:56:00.000Z",
-            "category": "이자",
-            "detailCategory": "234",
-            "memo": "44",
-            "income": 5550,
-            "expense": 220,
-            "dailyCalc": 0
-        },
-        {
-            "id": "a0cd",
-            "date": "2024-06-08T06:58:00.000Z",
-            "category": "차입",
-            "detailCategory": "123",
-            "memo": "123",
-            "income": 4110,
-            "expense": 410,
-            "dailyCalc": 0
-        },
-        {
-            "id": "3c98",
-            "date": "2024-06-05T07:12:00.000Z",
-            "category": "이자",
-            "detailCategory": "123",
-            "memo": "123",
-            "income": 5550,
-            "expense": 110,
-            "dailyCalc": 0
-        },
-        {
-            "id": "3c98",
-            "date": "2024-07-01T07:12:00.000Z",
-            "category": "이자",
-            "detailCategory": "123",
-            "memo": "123",
-            "income": 22250,
-            "expense": 1110,
-            "dailyCalc": 0
-        },
-        {
-            "id": "3c98",
-            "date": "2024-06-19T07:12:00.000Z",
-            "category": "이자",
-            "detailCategory": "123",
-            "memo": "123",
-            "income": 10500,
-            "expense": 500,
-            "dailyCalc": 0
-        },
-        {
-            "id": "2db5",
-            "isTrusted": true,
-            "_vts": 1718162617453
-        },
-        {
-            "id": "d01e",
-            "isTrusted": true,
-            "_vts": 1718162678765
-        },
-        {
-            "id": "1941"
-        },
-
-        {
-            "id": "8888",
-            "date": "2020-01-01T02:56:00.574Z",
-            "expense": 100000
-        }
-    ],
-    "incomeCategory": [
-        {
-            "id": "1",
-            "category": "월급"
-        },
-        {
-            "id": "2",
-            "category": "이자"
-        },
-        {
-            "id": "3",
-            "category": "차입"
-        }
-    ],
-    "expenseCategory": [
-        {
-            "id": "1",
-            "category": "세금"
-        },
-        {
-            "id": "2",
-            "category": "식비"
-        },
-        {
-            "id": "3",
-            "category": "주거"
-        },
-        {
-            "id": "4",
-            "category": "광열"
-        },
-        {
-            "id": "5",
-            "category": "보건"
-        },
-        {
-            "id": "6",
-            "category": "오락"
-        },
-        {
-            "id": "7",
-            "category": "교통"
-        },
-        {
-            "id": "8",
-            "category": "통신"
-        }
-    ],
-    "periodicExpense": [
-        {
-            "id": "1d6f",
-            "date": "2024-06-13T11:39:00.000Z"
-        }
-    ],
-    "profile": [
-        {
-            "id": "1d6f",
-            "date": "2024-06-13T11:39:00.000Z",
-            "name": "",
-            "phone": "",
-            "nickname": ""
-        }
-    ]
+  "property": [
+    {
+      "id": "1d6f",
+      "date": "2024-06-13"
+    }
+  ],
+  "budget": [
+    {
+      "id": "edef",
+      "date": "2024-06-06",
+      "type": "지출",
+      "category": "식비",
+      "amount": 5000,
+      "memo": "빕스44"
+    },
+    {
+      "id": "ed3f",
+      "date": "2024-06-06",
+      "type": "지출",
+      "category": "식비",
+      "amount": 100000,
+      "memo": "12344"
+    },
+    {
+      "id": "e2ef",
+      "date": "2024-06-06",
+      "type": "수입",
+      "category": "이자",
+      "amount": 100000,
+      "memo": "12344"
+    },
+    {
+      "id": "e1ef",
+      "date": "2024-06-06",
+      "type": "수입",
+      "category": "월급",
+      "amount": 1000000,
+      "memo": "12344"
+    },
+    {
+      "id": "c378",
+      "date": "2024-06-05",
+      "type": "수입",
+      "category": "이자",
+      "detailCategory": "123",
+      "amount": 1000001,
+      "memo": "123"
+    }
+  ],
+  "incomeCategory": [
+    {
+      "id": "1",
+      "category": "월급"
+    },
+    {
+      "id": "2",
+      "category": "이자"
+    },
+    {
+      "id": "3",
+      "category": "차입"
+    }
+  ],
+  "expenseCategory": [
+    {
+      "id": "1",
+      "category": "세금"
+    },
+    {
+      "id": "2",
+      "category": "식비"
+    },
+    {
+      "id": "3",
+      "category": "주거"
+    },
+    {
+      "id": "4",
+      "category": "보건"
+    },
+    {
+      "id": "5",
+      "category": "오락"
+    },
+    {
+      "id": "6",
+      "category": "교통"
+    },
+    {
+      "id": "7",
+      "category": "통신"
+    },
+    {
+      "id": "8",
+      "category": "저축"
+    }
+  ],
+  "periodicExpense": [
+    {
+      "id": "1d6f",
+      "date": "2024-06-13"
+    }
+  ],
+  "profile": [
+    {
+      "name": "최종현",
+      "phone": "010-5294-4460",
+      "date": "1998-11-04",
+      "nickname": "종현초이",
+      "id": "1"
+    }
+  ]
 }
